@@ -41,7 +41,8 @@ export default defineConfig({
 		lib: {
 			entry: path.resolve(__dirname, 'src/main.ts'),
 			name: 'First',
-			fileName: (format) => format === 'es' ? 'index.js' : `index.${format}.js`
+			formats: ['es', 'cjs', 'umd', 'iife'],
+			fileName: 'index'
 		},
 		// rollupOptions: {
 		// 	external: ['vue'],
